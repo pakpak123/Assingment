@@ -1,16 +1,32 @@
 #include <stdio.h>
+
 int main()
 
-{
-	int fac, count = 1;
-	long int sum = 1;
-	printf("Please enter your fractorial : ");
-	scanf_s("%d", &fac);
-	while (count <= fac)
+{	char grade;
+	printf("Enter  character A , B , C , D or F : ");
+	scanf_s("%c",&grade);
+	
+	switch(grade)
 	{
-		sum = sum * count;
-		count += 1;
+		case 'A' : 
+		printf("[80,100]");  
+		break;
+		case 'B' : 
+		printf("[70,80]"); 
+		break;
+		case 'C' : 
+		printf("[60,70]"); 
+		break;
+		case 'D' : 
+		printf("[50,60]"); 
+		break;
+		case 'F' : 
+		printf("[0,50]"); 
+		break;
+		defualt : 
+		printf("Error grade is not correct"); 
+		break;
 	}
-	printf("Result of %d is %ld", fac, sum);
+
 	return 0;
 }
