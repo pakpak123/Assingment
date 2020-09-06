@@ -25,15 +25,15 @@ int main()
 		}
 		else if ((15 <= i) && (i < 25))
 		{
-			printf("You are the Early adulthood");
+			printf("You are the Late adolescence");
 		}
 		else if ((25 <= i) && (i < 40))
 		{
-			printf("You are the Late adolescence");
+			printf("You are the Mature age");
 		}
 		else if ((40 <= i) && (i < 60))
 		{
-			printf("You are the Middle age");
+			printf("You are the Middle ages");
 		}
 		else
 		{
