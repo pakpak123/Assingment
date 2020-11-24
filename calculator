@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int sum(int a, int b);
+int subtract(int a, int b);
+int mul(int a, int b);
+int div(int a, int b);
+
+int (*A[4]) (int x, int y);
+
+int main(void)
+{
+    int result;
+    int i, j, n;
+
+    A[0] = sum; 
+    A[1] = subtract; 
+    A[2] = mul; 
+    A[3] = div; 
+
+    printf("Enter two numbers: ");
+    scanf_s("%d %d", &i, &j);
+
+    printf("0: Add, 1: Subtract, 2: Multiply, 3: Divide\n");
+    do {
+        printf("Enter number of operation: ");
+        scanf_s("%d", &n);
+    } while (n < 0 || n>3);
+
+    result = (*A[n]) (i, j);
+    printf("%d", result);
+
+    return 0;
+}
+
+int sum(int a, int b)
+{
+    return a + b;
+}
+
+int subtract(int a, int b)
+{
+    return a - b;
+}
+
+int mul(int a, int b)
+{
+    return a * b;
+}
+
+int div(int a, int b)
+{
+    if (a>b)
+        return a / b;
+    else
+        return 0;
+}
