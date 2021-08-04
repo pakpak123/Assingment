@@ -1,2 +1,2 @@
-# week02
-homework part2
+# Homework
+year1 ภาษาC
